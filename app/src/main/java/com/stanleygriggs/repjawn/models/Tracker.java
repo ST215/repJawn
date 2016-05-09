@@ -13,13 +13,13 @@ public class Tracker {
     private DateTime mDateTime;
     private double mAverage;
 
-    public Tracker(String title, int goal, int current, List<Event> mEventList, DateTime dateTime, double average) {
+    public Tracker(String title, int goal, int current, List<Event> mEventList, DateTime dateTime) {
         this.mTitle = title;
         this.mGoal = goal;
         this.mCurrent = current;
         this.mEventList = mEventList;
         this.mDateTime = dateTime;
-        this.mAverage = average;
+
     }
 
     public String getTitle() {
@@ -67,6 +67,8 @@ public class Tracker {
     }
 
     public void setAverage(double average) {
+
+        /// mAverage = mCurrent / days since goal was set
         this.mAverage = average;
     }
 }
